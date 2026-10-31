@@ -154,3 +154,42 @@ main > section::before, .header::before, .footer::before{
 }
 main > section > *, .header > *, .footer > *{z-index:1}
 main > section > :not(.hero-art):not(.hero-content):not(.hero-aside):not(.ridge):not(.river):not(.sun), .header > *, .footer > *{position:relative}
+
+/* Refinamento da Hero: retirar brilho amarelado do fundo sem afetar as cores da marca. */
+.hero{background:linear-gradient(115deg,#061d19 25%,#173f2b 65%,#385a39)!important}
+.hero .sun{opacity:.30;right:13%;top:15%}
+.hero::after{background:linear-gradient(90deg,rgba(4,27,22,.94) 5%,rgba(4,28,22,.73) 48%,rgba(4,28,22,.12) 100%)!important}
+
+/* Busca é a ação principal: botão forte e limpo, sem relevo exagerado. */
+.hero .search{border:1px solid rgba(217,163,74,.34);box-shadow:0 8px 24px rgba(0,0,0,.15)}
+.hero .search button{background:var(--forest);color:#fff;border:1px solid rgba(255,255,255,.14);border-radius:30px;padding:13px 23px;min-height:46px;box-shadow:none;transition:background .2s ease,transform .2s ease}
+.hero .search button:hover{background:#18523d;transform:translateY(-1px)}
+.hero .search button:focus-visible{outline:3px solid var(--ochre);outline-offset:3px}
+
+/* Descoberta secundária, compacta e sem brilho pulsante. */
+.hero .discover{
+ display:inline-flex;min-height:40px;max-width:100%;margin-top:12px;
+ padding:8px 14px;border:1px solid rgba(239,228,209,.45);
+ border-radius:22px;background:rgba(8,37,30,.36);color:var(--sand);
+ font-size:12px;font-weight:600;letter-spacing:0;
+ box-shadow:none;animation:none;filter:none;
+ transition:background .2s ease,border-color .2s ease,transform .2s ease;
+}
+.hero .discover:hover{background:rgba(8,37,30,.70);border-color:var(--ochre);transform:translateY(-1px);box-shadow:none;filter:none}
+.hero .discover:active{transform:none;box-shadow:none}
+@media(max-width:720px){.hero .search button{width:100%;min-height:44px}.hero .discover{font-size:12px;padding:8px 12px}}
+@media(prefers-reduced-motion:reduce){.hero .search button,.hero .discover{transition:none}}
+
+/* Grafismo integrado ao topo do rodapé: sobre o fundo escuro, nunca oculto pelo main. */
+.footer{padding-top:0!important}
+.footer > .footer-ornament{height:38px;width:100%;opacity:1!important;display:block!important;
+  background-color:transparent!important;
+  background-image:linear-gradient(var(--deep),var(--deep)),none;
+  border:0!important;
+}
+.footer > .footer-ornament{
+ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='38' viewBox='0 0 128 38'%3E%3Cg fill='none' stroke='%23d9a34a' stroke-width='2.1'%3E%3Cpath d='M3 19 21 3 39 19 21 35ZM12 19l9-9 9 9-9 9ZM48 19 64 7 80 19 64 31ZM56 19l8-6 8 6-8 6ZM91 19 109 3 127 19 109 35ZM100 19l9-9 9 9-9 9Z'/%3E%3C/g%3E%3C/svg%3E")!important;
+ background-color:var(--deep)!important;background-size:128px 38px!important;background-repeat:repeat-x!important;
+}
+.footer > .footer-inner{padding-top:44px}
+@media(max-width:600px){.footer > .footer-ornament{height:30px;background-size:101px 30px!important}.footer > .footer-inner{padding-top:34px}}
