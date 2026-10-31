@@ -193,3 +193,7 @@ main > section > :not(.hero-art):not(.hero-content):not(.hero-aside):not(.ridge)
 }
 .footer > .footer-inner{padding-top:44px}
 @media(max-width:600px){.footer > .footer-ornament{height:30px;background-size:101px 30px!important}.footer > .footer-inner{padding-top:34px}}
+
+/* Hero sem foco luminoso amarelo: manter composição verde e textura. */
+.hero .sun{display:none!important}
+.hero{background:linear-gradient(115deg,#061d19 20%,#123b2b 64%,#28513d 100%)!important}
