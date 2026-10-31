@@ -61,3 +61,7 @@ h1,h2,h3,.feature strong,.povo-card h3,.item-resultado h2,.news-card h3,.languag
 .header .brand small,.footer .brand small{font-size:clamp(13px,1.4vw,16px)!important}
 @media(max-width:720px){.header .brand,.footer .brand{font-size:clamp(25px,6vw,31px)!important;gap:8px}.brand-symbol{flex-shrink:0}}
 @media(max-width:390px){.header .brand,.footer .brand{font-size:25px!important}.header .brand small,.footer .brand small{font-size:12px!important;letter-spacing:.45px!important}}
+
+/* Aproximar a assinatura do nome Originária sem alterar a hierarquia aprovada. */
+.header .brand small,.footer .brand small{margin-top:2px!important;line-height:1.12!important}
+@media(max-width:440px){.header .brand small,.footer .brand small{margin-top:1px!important}}
