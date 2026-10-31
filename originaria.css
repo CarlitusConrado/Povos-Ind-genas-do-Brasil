@@ -109,3 +109,6 @@ body::after{
  background-repeat:repeat-x;
 }
 @media(max-width:600px){.section-ornament{height:30px;background-size:101px 30px;opacity:.86}}
+
+/* Divisória sem faixa de cor independente: a cor da seção permanece contínua. */
+.section-ornament{background-color:transparent!important}
