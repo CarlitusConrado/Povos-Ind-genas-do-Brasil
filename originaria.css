@@ -112,3 +112,8 @@ body::after{
 
 /* Divisória sem faixa de cor independente: a cor da seção permanece contínua. */
 .section-ornament{background-color:transparent!important}
+
+/* Respiro após as divisórias, sobretudo antes do carrossel de cards. */
+.section-ornament + .feature-section{padding-top:34px}
+.section-ornament + .intro{padding-top:88px}
+@media(max-width:720px){.section-ornament + .feature-section{padding-top:28px}.section-ornament + .intro{padding-top:54px}}
