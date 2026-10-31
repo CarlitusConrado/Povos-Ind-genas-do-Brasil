@@ -45,3 +45,7 @@ h1,h2,h3,.feature strong,.povo-card h3,.item-resultado h2,.news-card h3,.languag
 :root{--heading-font:"Arima",Georgia,serif}
 h1,h2,h3,.feature strong,.povo-card h3,.item-resultado h2,.news-card h3,.language-grid h3,.language-head h2,.news-head h2{font-family:var(--heading-font)!important;font-weight:700!important;letter-spacing:-.015em!important}
 .hero h1{font-family:var(--heading-font)!important;font-weight:700!important;letter-spacing:-.025em!important;line-height:1.18}
+
+/* Arima preservada, com títulos mais encorpados conforme avaliação no mobile. */
+h1,h2,h3,.feature strong,.povo-card h3,.item-resultado h2,.news-card h3,.language-grid h3,.language-head h2,.news-head h2{font-weight:800!important}
+.hero h1{font-weight:900!important;letter-spacing:-.025em!important}
