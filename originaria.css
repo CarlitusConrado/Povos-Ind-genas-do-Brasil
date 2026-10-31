@@ -117,3 +117,6 @@ body::after{
 .section-ornament + .feature-section{padding-top:34px}
 .section-ornament + .intro{padding-top:88px}
 @media(max-width:720px){.section-ornament + .feature-section{padding-top:28px}.section-ornament + .intro{padding-top:54px}}
+
+/* A faixa ornamental já separa Saberes e Línguas: dispensar a borda adicional. */
+#saberes.editorial-border{border-top:0!important}
