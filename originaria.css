@@ -142,3 +142,15 @@ body::after{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A
 .hero .discover:focus-visible{outline:3px solid var(--ochre);outline-offset:4px}
 @keyframes originaria-button-breathe{0%,100%{box-shadow:0 5px 0 rgba(31,17,11,.42),0 12px 25px rgba(0,0,0,.2)}50%{box-shadow:0 5px 0 rgba(31,17,11,.42),0 12px 25px rgba(0,0,0,.2),0 0 0 5px rgba(217,163,74,.12)}}
 @media(prefers-reduced-motion:reduce){.hero .discover{animation:none;transition:none}}
+
+/* Corrigir empilhamento: textura pertence ao plano de fundo de cada seção,
+   não a um véu fixo sobre tipografia, imagens e componentes. */
+body::after{content:none!important;display:none!important}
+main > section, .header, .footer{position:relative;isolation:isolate}
+main > section::before, .header::before, .footer::before{
+ content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+ background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22160%22%20height%3D%22160%22%20viewBox%3D%220%200%20160%20160%22%3E%3Cg%20fill%3D%22%235c3e24%22%20opacity%3D%22.46%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2218%22%20r%3D%221.1%22%2F%3E%3Ccircle%20cx%3D%2246%22%20cy%3D%2211%22%20r%3D%22.8%22%2F%3E%3Ccircle%20cx%3D%2273%22%20cy%3D%2242%22%20r%3D%221.3%22%2F%3E%3Ccircle%20cx%3D%22125%22%20cy%3D%2224%22%20r%3D%22.9%22%2F%3E%3Ccircle%20cx%3D%22146%22%20cy%3D%2274%22%20r%3D%221.6%22%2F%3E%3Ccircle%20cx%3D%2227%22%20cy%3D%2291%22%20r%3D%221.5%22%2F%3E%3Ccircle%20cx%3D%2285%22%20cy%3D%22111%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%22112%22%20cy%3D%22142%22%20r%3D%221.6%22%2F%3E%3Ccircle%20cx%3D%228%22%20cy%3D%22148%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%2257%22%20cy%3D%2265%22%20r%3D%22.8%22%2F%3E%3Ccircle%20cx%3D%22143%22%20cy%3D%22130%22%20r%3D%22.9%22%2F%3E%3Ccircle%20cx%3D%2297%22%20cy%3D%229%22%20r%3D%22.8%22%2F%3E%3C%2Fg%3E%3Cg%20stroke%3D%22%236a5039%22%20stroke-width%3D%22.65%22%20fill%3D%22none%22%20opacity%3D%22.38%22%3E%3Cpath%20d%3D%22M6%2039l20%205%207-1M96%2072l18-4%2012%203M44%20139l17-3%207%202M120%20102l19%203M10%20119l11-3%208%201M54%2022l15%203%22%2F%3E%3C%2Fg%3E%3Cfilter%20id%3D%22n%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%22.44%22%20numOctaves%3D%223%22%20stitchTiles%3D%22stitch%22%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%22160%22%20height%3D%22160%22%20filter%3D%22url(%23n)%22%20opacity%3D%22.21%22%2F%3E%3C%2Fsvg%3E");
+ background-size:160px 160px;mix-blend-mode:multiply;opacity:.67;
+}
+main > section > *, .header > *, .footer > *{z-index:1}
+main > section > :not(.hero-art):not(.hero-content):not(.hero-aside):not(.ridge):not(.river):not(.sun), .header > *, .footer > *{position:relative}
