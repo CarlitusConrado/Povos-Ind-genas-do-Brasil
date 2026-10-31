@@ -328,3 +328,8 @@ main > section:not(.wrap)::before,.header::before,.footer::before{
  .reader-toolbar{padding-inline:10px!important;column-gap:5px!important}
  .reader-toolbar button,.reader-toolbar select{padding-inline:5px!important}
 }
+
+/* Refinamento final da barra de áudio: controles ainda mais enxutos, com respiro lateral. */
+.reader-toolbar{padding:4px clamp(16px,4vw,52px)!important;column-gap:9px!important;row-gap:4px!important}
+.reader-toolbar button,.reader-toolbar select{font-size:10px!important;min-height:26px!important;padding:2px 5px!important;line-height:1.1!important}
+@media(max-width:720px){.reader-toolbar{padding:4px 14px!important;column-gap:7px!important;row-gap:4px!important}.reader-toolbar button,.reader-toolbar select{font-size:10px!important;padding:2px 5px!important;min-height:26px!important}}
