@@ -40,3 +40,8 @@ h1,h2,h3,.feature strong,.povo-card h3,.item-resultado h2,.news-card h3,.languag
 h1,h2,h3,.feature strong,.povo-card h3,.item-resultado h2,.news-card h3,.language-grid h3,.language-head h2,.news-head h2{font-family:var(--heading-font)!important;font-weight:400!important;letter-spacing:0!important}
 .hero h1{font-family:var(--heading-font)!important;font-weight:400!important;letter-spacing:-.015em!important;line-height:1.2}
 @media(max-width:440px){.hero h1{font-size:clamp(35px,8.7vw,45px);line-height:1.19}}
+
+/* Revisão solicitada: sem grafite; títulos orgânicos e caligráficos. */
+:root{--heading-font:"Arima",Georgia,serif}
+h1,h2,h3,.feature strong,.povo-card h3,.item-resultado h2,.news-card h3,.language-grid h3,.language-head h2,.news-head h2{font-family:var(--heading-font)!important;font-weight:700!important;letter-spacing:-.015em!important}
+.hero h1{font-family:var(--heading-font)!important;font-weight:700!important;letter-spacing:-.025em!important;line-height:1.18}
