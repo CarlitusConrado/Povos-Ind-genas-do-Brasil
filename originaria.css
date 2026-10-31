@@ -301,3 +301,9 @@ main > section:not(.wrap)::before,.header::before,.footer::before{
     transition:none!important;transform:none!important;
   }
 }
+
+/* Barra de leitura compacta, mantendo alvos acessíveis para toque. */
+.reader-toolbar{padding:4px clamp(16px,4vw,64px);gap:6px 9px;font-size:12px;min-height:48px}
+.reader-toolbar button,.reader-toolbar select{padding:4px 9px;min-height:36px;border-radius:6px;font-size:12px}
+.reader-toolbar label{margin-left:4px}
+@media(max-width:720px){.reader-toolbar{padding:5px 12px;gap:4px 7px}.reader-toolbar button,.reader-toolbar select{min-height:36px;padding:4px 8px}.reader-toolbar>span:first-child{font-size:11px}}
