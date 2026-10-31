@@ -54,3 +54,10 @@ h1,h2,h3,.feature strong,.povo-card h3,.item-resultado h2,.news-card h3,.languag
 .header .brand,.footer .brand{font-family:"Arima",Georgia,serif!important;font-weight:900!important;letter-spacing:.02em!important;line-height:1.05}
 .header .brand small,.footer .brand small{font-family:var(--display-font)!important;font-weight:700!important;letter-spacing:1.1px!important;line-height:1.3}
 @media(max-width:440px){.header .brand,.footer .brand{font-size:20px;letter-spacing:0!important}.header .brand small,.footer .brand small{letter-spacing:.75px!important}}
+
+/* Hierarquia da marca: wordmark maior que a assinatura, sem mudar a tagline. */
+.header .brand,.footer .brand{font-size:clamp(30px,2.8vw,39px)!important;gap:10px}
+.header .brand>span,.footer .brand>span{min-width:0}
+.header .brand small,.footer .brand small{font-size:clamp(13px,1.4vw,16px)!important}
+@media(max-width:720px){.header .brand,.footer .brand{font-size:clamp(25px,6vw,31px)!important;gap:8px}.brand-symbol{flex-shrink:0}}
+@media(max-width:390px){.header .brand,.footer .brand{font-size:25px!important}.header .brand small,.footer .brand small{font-size:12px!important;letter-spacing:.45px!important}}
