@@ -68,3 +68,17 @@ h1,h2,h3,.feature strong,.povo-card h3,.item-resultado h2,.news-card h3,.languag
 
 /* Tagline em amarelo-ocre da paleta da Originária. */
 .header .brand small,.footer .brand small{color:var(--ochre)!important}
+
+/* Textura mineral/terra: grão delicado sobre a paleta original, sem alterar as faixas de cor.
+   SVG de ruído procedural embutido (sem downloads ou recursos externos). */
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:30;
+  pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.68' numOctaves='3' stitchTiles='stitch' seed='7'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)' opacity='.36'/%3E%3C/svg%3E");
+  background-size:180px 180px;
+  mix-blend-mode:multiply;
+  opacity:.16;
+}
