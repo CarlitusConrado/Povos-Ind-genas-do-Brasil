@@ -221,3 +221,17 @@ main > section > :not(.hero-art):not(.hero-content):not(.hero-aside):not(.ridge)
   animation:none!important;
 }
 @media(max-width:720px){.hero .discover{min-height:34px!important;padding:6px 10px!important;font-size:11px!important}}
+
+/* Fundo contínuo e responsivo: textura sem recortes nas seções de largura limitada. */
+html,body{min-width:0;width:100%;max-width:100%;overflow-x:clip}
+body{background-color:var(--cream);background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22160%22%20height%3D%22160%22%20viewBox%3D%220%200%20160%20160%22%3E%3Cg%20fill%3D%22%235c3e24%22%20opacity%3D%22.46%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2218%22%20r%3D%221.1%22%2F%3E%3Ccircle%20cx%3D%2246%22%20cy%3D%2211%22%20r%3D%22.8%22%2F%3E%3Ccircle%20cx%3D%2273%22%20cy%3D%2242%22%20r%3D%221.3%22%2F%3E%3Ccircle%20cx%3D%22125%22%20cy%3D%2224%22%20r%3D%22.9%22%2F%3E%3Ccircle%20cx%3D%22146%22%20cy%3D%2274%22%20r%3D%221.6%22%2F%3E%3Ccircle%20cx%3D%2227%22%20cy%3D%2291%22%20r%3D%221.5%22%2F%3E%3Ccircle%20cx%3D%2285%22%20cy%3D%22111%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%22112%22%20cy%3D%22142%22%20r%3D%221.6%22%2F%3E%3Ccircle%20cx%3D%228%22%20cy%3D%22148%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%2257%22%20cy%3D%2265%22%20r%3D%22.8%22%2F%3E%3Ccircle%20cx%3D%22143%22%20cy%3D%22130%22%20r%3D%22.9%22%2F%3E%3Ccircle%20cx%3D%2297%22%20cy%3D%229%22%20r%3D%22.8%22%2F%3E%3C%2Fg%3E%3Cg%20stroke%3D%22%236a5039%22%20stroke-width%3D%22.65%22%20fill%3D%22none%22%20opacity%3D%22.38%22%3E%3Cpath%20d%3D%22M6%2039l20%205%207-1M96%2072l18-4%2012%203M44%20139l17-3%207%202M120%20102l19%203M10%20119l11-3%208%201M54%2022l15%203%22%2F%3E%3C%2Fg%3E%3Cfilter%20id%3D%22n%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%22.44%22%20numOctaves%3D%223%22%20stitchTiles%3D%22stitch%22%2F%3E%3C%2Ffilter%3E%3Crect%20width%3D%22160%22%20height%3D%22160%22%20filter%3D%22url(%23n)%22%20opacity%3D%22.21%22%2F%3E%3C%2Fsvg%3E");background-repeat:repeat;background-position:0 0;background-size:160px 160px}
+main{width:100%;min-width:0}
+main > section.wrap::before{content:none!important;display:none!important}
+main > section:not(.wrap)::before,.header::before,.footer::before{
+  background-size:160px 160px;background-repeat:repeat;background-position:0 0;
+}
+.section-ornament:not(.footer-ornament){width:100%;max-width:100%;background-color:transparent!important}
+@media(max-width:720px){
+ html,body,main{width:100%;max-width:100%}
+ main > section:not(.wrap){width:100%;max-width:100%}
+}
