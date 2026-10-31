@@ -333,3 +333,42 @@ main > section:not(.wrap)::before,.header::before,.footer::before{
 .reader-toolbar{padding:4px clamp(16px,4vw,52px)!important;column-gap:9px!important;row-gap:4px!important}
 .reader-toolbar button,.reader-toolbar select{font-size:10px!important;min-height:26px!important;padding:2px 5px!important;line-height:1.1!important}
 @media(max-width:720px){.reader-toolbar{padding:4px 14px!important;column-gap:7px!important;row-gap:4px!important}.reader-toolbar button,.reader-toolbar select{font-size:10px!important;padding:2px 5px!important;min-height:26px!important}}
+
+
+/* Movimento harmonizado nos carrosséis de notícias e povos. */
+.news-carousel .news-card,
+.catalog .povo-card,
+.catalog .item-resultado{
+  position:relative;
+  transition:transform .3s cubic-bezier(.2,.8,.2,1),
+    box-shadow .3s ease,border-color .3s ease,background-color .3s ease;
+}
+.news-carousel .news-card .news-read,
+.catalog .povo-card a,
+.catalog .item-resultado a{
+  transition:color .25s ease,letter-spacing .25s ease;
+}
+/* Respiro suficiente para a elevação não ser recortada pelo viewport. */
+.news-carousel .news-carousel-viewport{padding:12px 2px 18px;margin:-12px -2px -18px}
+@media(hover:hover) and (pointer:fine){
+  .news-carousel .news-card:hover,
+  .catalog .povo-card:hover,
+  .catalog .item-resultado:hover{
+    transform:translateY(-7px);
+    box-shadow:0 16px 32px rgba(8,37,30,.18);
+    border-color:var(--ochre);
+  }
+  .news-carousel .news-card:hover{background-color:#fff9ed}
+  .catalog .povo-card:hover,.catalog .item-resultado:hover{background-color:#fffdf7}
+  .news-carousel .news-card:hover .news-read,
+  .catalog .povo-card:hover a,
+  .catalog .item-resultado:hover a{color:#a44e2b;letter-spacing:.015em}
+}
+.news-carousel .news-read:focus-visible,
+.catalog .povo-card a:focus-visible,
+.catalog .item-resultado a:focus-visible{outline:3px solid var(--ochre);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){
+  .news-carousel .news-card,
+  .catalog .povo-card,.catalog .item-resultado,
+  .news-carousel .news-read,.catalog .povo-card a,.catalog .item-resultado a{transition:none!important;transform:none!important}
+}
