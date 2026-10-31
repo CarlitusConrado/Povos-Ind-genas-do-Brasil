@@ -6,3 +6,13 @@
 .atlas-footnote{font-size:.86rem;line-height:1.6;margin:1.1rem 0 0}.atlas-dialog{max-width:min(540px,calc(100vw - 2rem));width:100%;background:#f2e5c9;color:#193c2e;border:2px solid #bd9759;border-radius:18px;padding:2rem;box-shadow:0 20px 80px rgba(0,0,0,.35)}.atlas-dialog::backdrop{background:rgba(5,24,17,.8)}.atlas-dialog h2{font-family:Arima,serif;margin:.5rem 0}.atlas-dialog p{line-height:1.65}.atlas-dialog a{color:#7a401e;text-decoration:underline}.atlas-close{position:absolute;top:.65rem;right:.8rem;cursor:pointer;border:0;background:transparent;font-size:1.8rem;color:inherit}.atlas-overline{font-size:.75rem;letter-spacing:.12em;font-weight:700}.atlas-empty{grid-column:1/-1}
 @media(max-width:750px){.atlas-controls{grid-template-columns:1fr}.atlas-cards{grid-template-columns:1fr}.atlas-dialog{padding:1.5rem}}
 @media(prefers-reduced-motion:reduce){.atlas-card{transition:none}.atlas-card:hover{transform:none}}
+
+/* Exibe um único perfil por vez, com navegação progressiva. */
+.atlas-cards{display:flex;justify-content:center;align-items:stretch}
+.atlas-card{width:100%;max-width:550px;min-width:0}
+.atlas-navigation{display:flex;justify-content:center;align-items:center;gap:1.2rem;margin-top:1rem}
+.atlas-navigation[hidden]{display:none}
+.atlas-navigation button{width:44px;height:44px;border-radius:50%;border:1px solid #d9a34a;background:#d9a34a;color:#163b2d;font-size:1.25rem;cursor:pointer}
+.atlas-navigation button:disabled{opacity:.35;cursor:not-allowed}
+.atlas-navigation button:focus-visible{outline:3px solid #fff0bd;outline-offset:3px}
+.atlas-position{font-size:.92rem;color:#f3dfba;min-width:75px;text-align:center}
