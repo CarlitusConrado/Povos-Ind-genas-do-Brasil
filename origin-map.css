@@ -1,0 +1,15 @@
+
+/* Atlas interativo: estados brasileiros */
+.origin-map-panel{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(250px,.8fr);gap:clamp(1rem,3vw,2rem);margin-top:2rem;padding:clamp(1rem,3vw,2rem);background:rgba(241,229,199,.09);border:1px solid rgba(237,207,148,.35);border-radius:20px}
+.origin-map-heading{grid-column:1/-1}.origin-map-heading h3{font-family:Arima,serif;font-size:clamp(1.35rem,3vw,2rem);margin:0 0 .3rem}.origin-map-heading p{margin:0;opacity:.85}
+.origin-map-stage{min-width:0;position:relative}.origin-map-stage svg{display:block;width:100%;height:auto;max-height:540px;overflow:visible}
+.origin-map-state{fill:#c09c60;stroke:#163f31;stroke-width:1.1;vector-effect:non-scaling-stroke;transition:fill .2s,filter .2s;cursor:pointer;outline:none}
+.origin-map-state:hover,.origin-map-state:focus-visible{fill:#f1cc7c;filter:drop-shadow(0 0 5px rgba(242,199,111,.7))}
+.origin-map-state[aria-pressed=true]{fill:#f7da91;stroke:#fff0cb;stroke-width:2.5}
+.origin-map-sidebar{background:rgba(8,37,27,.38);padding:1.1rem;border:1px solid rgba(255,243,212,.22);border-radius:14px;align-self:start}
+.origin-map-sidebar h4{font-family:Arima,serif;font-size:1.45rem;margin:.5rem 0}.origin-map-sidebar p{line-height:1.6}.origin-map-sidebar a{color:#f2d48e;text-decoration:underline;text-underline-offset:4px}
+.origin-map-sidebar select{width:100%;border-radius:8px;padding:.7rem;border:2px solid #d9a34a;color:#173b2c;background:#fff9eb;font:inherit}
+.origin-map-sidebar .origin-map-links{display:grid;gap:.7rem;margin-top:1rem}
+.origin-map-note{font-size:.8rem;opacity:.82}.origin-map-loading{min-height:260px;display:grid;place-items:center;text-align:center}
+@media(max-width:750px){.origin-map-panel{grid-template-columns:1fr}.origin-map-stage{grid-row:2}.origin-map-sidebar{grid-row:3}.origin-map-stage svg{max-height:420px}}
+@media(prefers-reduced-motion:reduce){.origin-map-state{transition:none}}
