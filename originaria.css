@@ -313,3 +313,18 @@ main > section:not(.wrap)::before,.header::before,.footer::before{
 .reader-toolbar button,.reader-toolbar select{min-height:32px!important;padding:2px 7px!important;font-size:11px!important;line-height:1.1;border-radius:5px}
 .reader-toolbar label{margin-left:2px!important;font-size:11px}
 @media(max-width:720px){.reader-toolbar{padding:2px 8px!important;gap:3px 5px!important}.reader-toolbar button,.reader-toolbar select{min-height:32px!important;padding:2px 6px!important}}
+
+
+/* Barra de leitura: botões proporcionais e margens visíveis. */
+.reader-toolbar{padding:4px clamp(14px,3.5vw,48px)!important;gap:5px 8px!important;justify-content:flex-start;align-items:center}
+.reader-toolbar button,.reader-toolbar select{font-size:10.5px!important;min-height:28px!important;padding:3px 7px!important;border-radius:5px!important;white-space:nowrap;flex:0 0 auto}
+.reader-toolbar>span:first-child,.reader-toolbar label{font-size:10.5px!important;white-space:nowrap}
+@media(max-width:720px){
+ .reader-toolbar{padding:5px 12px!important;column-gap:6px!important;row-gap:4px!important}
+ .reader-toolbar button,.reader-toolbar select{min-height:28px!important;padding:3px 6px!important;font-size:10px!important}
+ .reader-toolbar label{margin-left:0!important}
+}
+@media(max-width:370px){
+ .reader-toolbar{padding-inline:10px!important;column-gap:5px!important}
+ .reader-toolbar button,.reader-toolbar select{padding-inline:5px!important}
+}
