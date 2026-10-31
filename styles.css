@@ -407,3 +407,26 @@ footer p { margin: 0; line-height: 1.5; }
   .descricao-meta { font-size: 1rem; line-height: 1.55; }
   footer { font-size: .8rem; }
 }
+
+/* Mobile composition refinements: safer horizontal spacing and portrait framing. */
+@media (max-width: 768px) {
+  body {
+    background-position: 68% center;
+  }
+  main {
+    width: 100%;
+    padding-inline: clamp(1.5rem, 6vw, 2.25rem);
+  }
+  .resultados-pesquisa { padding-inline: 0; }
+}
+@media (max-width: 480px) {
+  body {
+    /* Keep the subject more visible instead of the desktop centered crop. */
+    background-position: 72% center;
+  }
+  main {
+    padding-inline: max(1.5rem, env(safe-area-inset-left), env(safe-area-inset-right));
+  }
+  h1 { max-width: 100%; }
+  section input { width: 100%; }
+}
